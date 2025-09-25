@@ -1,26 +1,110 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0c0117;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-primary: var(--background);
+  --color-purple: #a75df3;
+  --color-teal: #5bdbfd;
+  --color-teal-2: #90e8ff;
+  --color-teal-3: #13b8ff;
+  --color-blue: #7375ff;
+  --color-blue-2: #9c9eff;
+  --color-pink: #df93ff;
+  --color-pink-2: #e3a1ff;
+  --color-red: #e56f8c;
+  --color-red-2: #ff4a77;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --gradient-main: linear-gradient(
+    89.75deg,
+    #5bdbfd 0.26%,
+    #7375ff 51.07%,
+    #df93ff 100.96%,
+    #e56f8c 126.34%
+  );
+
+  --gradient-secondary: linear-gradient(
+    126.34deg,
+    #5bdbfd 16.95%,
+    #7375ff 79.54%,
+    #df93ff 140.99%,
+    #e56f8c 172.25%
+  );
+
+  --gradient-accent: linear-gradient(
+    90.63deg,
+    #90e8ff 0.44%,
+    #9c9eff 69.99%,
+    #e3a1ff 138.27%,
+    #e56f8c 173.01%
+  );
+
+  --font-raleway: 'var(--font-raleway)', sans-serif;
+  --font-manrope: 'var(--font-manrope)', sans-serif;
+  --font-sansation: 'var(--font-sansation)', sans-serif;
+
+  --breakpoint-mb: 393px;
+  --container-mb: 393px;
+  --breakpoint-ds: 1280px;
+  --container-ds: 1280px;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-white);
+  font-family: var(--font-manrope);
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset CSS */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }

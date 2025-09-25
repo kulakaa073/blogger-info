@@ -1,4 +1,4 @@
-const RatesCard = () => {
+const PricingCard = () => {
   return (
     <div>
       <h3>Базовий</h3>
@@ -15,4 +15,4 @@ const RatesCard = () => {
   );
 };
 
-export default RatesCard;
+export default PricingCard;

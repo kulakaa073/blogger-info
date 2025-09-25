@@ -1,6 +1,11 @@
 import Image from 'next/image';
+import { Language } from '@/lib/translations';
 
-const Hero = () => {
+interface HeroProps {
+  language: Language;
+}
+
+const Hero = ({ language }: HeroProps) => {
   return (
     <section>
       <div>

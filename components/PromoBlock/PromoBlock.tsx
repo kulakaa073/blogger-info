@@ -1,4 +1,10 @@
-const PromoBlock = () => {
+import { Language } from '@/lib/translations';
+
+interface PromoBlockProps {
+  language: Language;
+}
+
+const PromoBlock = ({ language }: PromoBlockProps) => {
   return (
     <section>
       <h2>Дізнайся як створити контент, який підкорює аудиторію</h2>
