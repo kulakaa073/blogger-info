@@ -30,7 +30,7 @@ const LanguageSelect = ({ currentLanguage }: LanguageSelectProps) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative rounded-sm p-1.25 hover:inset-ring-2 hover:inset-ring-white transition-all duration-250 ease-in-out">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2.25 h-5"

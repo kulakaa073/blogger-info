@@ -8,19 +8,19 @@ const BackgroundEffects = () => {
         width={184.36}
         height={173.59}
         blur={289.32}
-        className="left-[218px] top-[185px] bg-purple"
+        className="left-[218px] top-[185px] bg-purple mix-blend-multiply opacity-80"
       />
       <BlurredEllipse
         width={184.36}
         height={173.59}
         blur={289.32}
-        className="-left-[55px] top-[512px] bg-teal-3"
+        className="-left-[55px] top-[512px] bg-teal-3 mix-blend-multiply opacity-80"
       />
       <BlurredEllipse
         width={184.36}
         height={173.59}
-        blur={289.32}
-        className="left-[298px] top-[969.59px] bg-teal-3"
+        blur={144.659}
+        className="left-[298px] top-[969.59px] bg-teal-3 mix-blend-multiply opacity-80"
       />
     </div>
   );

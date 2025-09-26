@@ -34,13 +34,13 @@ const PromoBlock = ({ language }: PromoBlockProps) => {
           <BlurredEllipse
             width={315.7}
             height={282}
-            blur={148.63}
+            blur={74.3132}
             className="-left-[221px] -top-[203px] [background:var(--gradient-main)] ds:hidden"
           />
           <BlurredEllipse
             width={315.7}
             height={282}
-            blur={148.63}
+            blur={74.3132}
             className="left-[299px] top-[408px] [background:var(--gradient-main)] ds:hidden"
           />
           <h2 className="font-raleway font-bold text-xl ds:text-4xl leading-5.75 ds:leading-10.5 text-center uppercase flex flex-col ds:block mb-5 ds:w-111.75">
@@ -53,20 +53,20 @@ const PromoBlock = ({ language }: PromoBlockProps) => {
           <p className="font-raleway text-sm ds:text-2xl leading-4 ds:leading-7 text-center mb-15.5">
             Матеріали, які мають змогу охопити тисячі людей
           </p>
-          <button className="w-67 ds:w-133.5 relative font-raleway font-semibold text-sm ds:text-[22.11px] leading-[19.42px] ds:leading-[36.84px] [background:var(--gradient-secondary)] text-white shadow-[3.88px_5.83px_9.71px_3.88px_#A75DF333_inset] ds:shadow-[7.37px_11.05px_18.42px_7.37px_#A75DF333_inset] py-6 ds:py-[18.5px] pr-17.75 pl-12.25 ds:px-auto rounded-full text-nowrap">
+          <button className="w-67 ds:w-133.5 relative font-raleway font-semibold text-sm ds:text-[22.11px] leading-[19.42px] ds:leading-[36.84px] [background:var(--gradient-secondary)] text-white shadow-[3.88px_5.83px_9.71px_3.88px_#A75DF333_inset] ds:shadow-[7.37px_11.05px_18.42px_7.37px_#A75DF333_inset] py-6 ds:py-[18.5px] pr-17.75 pl-12.25 ds:px-auto rounded-full text-nowrap hover:brightness-105 hover:scale-102 transition-all duration-250 ease-in-out">
             <p className="h-5 ds:h-9.25">Придбати зі знижкою</p>
             <span className="bg-red-2 h-17 w-15.25 ds:h-18.5 ds:w-18.5 flex items-center justify-center absolute right-0 top-0 rounded-full text-white text-xl leading-4.75 ds:text-2xl ds:leading-9.25">
               -50%
             </span>
           </button>
-          <div className="w-[1547.86px] h-[97.19px] hidden [background:var(--gradient-secondary)] -rotate-[35.51deg] absolute bottom-[98.73px] left-[515.6px] blur-[6.73px] ds:flex items-center gap-[38.59]">
-            <p className="font-sansation text-[34.3016px] leading-9.5 text-white uppercase">
+          <div className="w-[1547.86px] h-[97.19px] hidden [background:var(--gradient-secondary)] -rotate-[35.51deg] absolute left-[383.31px] top-[318.46px] blur-[3.36512px] ds:flex items-center gap-[38.59]">
+            <p className="font-sansation text-[34.3016px] w-122.5 leading-9.5 text-white uppercase">
               Секрети вірсних відео
             </p>
             <p className="font-sansation text-[34.3016px] leading-9.5 text-white uppercase">
               Секрети вірсних відео
             </p>
-            <p className="font-sansation text-[34.3016px] leading-9.5 text-white uppercase">
+            <p className="font-sansation text-[34.3016px] w-122.5 leading-9.5 text-white uppercase">
               Секрети вірсних відео
             </p>
           </div>
