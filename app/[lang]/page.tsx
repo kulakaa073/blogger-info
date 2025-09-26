@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero/Hero';
 import PromoBlock from '@/components/PromoBlock/PromoBlock';
-import PricingBlock from '@/components/PricingBlock/PricingBlock';
+import PlanBlock from '@/components/PlanBlock/PlanBlock';
 import { getLanguageFromParams } from '@/lib/language';
 
 interface HomeProps {
@@ -15,7 +15,7 @@ const Home = async ({ params }: HomeProps) => {
   return (
     <>
       <Hero language={language} />
-      <PricingBlock language={language} />
+      <PlanBlock language={language} />
       <PromoBlock language={language} />
     </>
   );
