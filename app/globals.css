@@ -16,39 +16,44 @@
   --color-pink-2: #e3a1ff;
   --color-red: #e56f8c;
   --color-red-2: #ff4a77;
+  --color-gray: #c5c5c5;
 
   --gradient-main: linear-gradient(
     89.75deg,
-    #5bdbfd 0.26%,
-    #7375ff 51.07%,
-    #df93ff 100.96%,
-    #e56f8c 126.34%
+    var(--color-teal) 0.26%,
+    var(--color-blue) 51.07%,
+    var(--color-pink) 100.96%,
+    var(--color-red) 126.34%
   );
 
   --gradient-secondary: linear-gradient(
     126.34deg,
-    #5bdbfd 16.95%,
-    #7375ff 79.54%,
-    #df93ff 140.99%,
-    #e56f8c 172.25%
+    var(--color-teal) 16.95%,
+    var(--color-blue) 79.54%,
+    var(--color-pink) 140.99%,
+    var(--color-red) 172.25%
   );
 
   --gradient-accent: linear-gradient(
     90.63deg,
-    #90e8ff 0.44%,
-    #9c9eff 69.99%,
-    #e3a1ff 138.27%,
-    #e56f8c 173.01%
+    var(--color-teal-2) 0.44%,
+    var(--color-blue-2) 69.99%,
+    var(--color-pink-2) 138.27%,
+    var(--color-red) 173.01%
   );
 
   --font-raleway: 'var(--font-raleway)', sans-serif;
   --font-manrope: 'var(--font-manrope)', sans-serif;
   --font-sansation: 'var(--font-sansation)', sans-serif;
 
+  --text-heading: 54px;
+
   --breakpoint-mb: 393px;
   --container-mb: 393px;
   --breakpoint-ds: 1280px;
   --container-ds: 1280px;
+
+  --radius-bg: 16px;
 }
 
 body {

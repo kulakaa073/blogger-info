@@ -5,7 +5,8 @@ import { Raleway } from 'next/font/google';
 import { Manrope } from 'next/font/google';
 import { Sansation } from '@/fonts/Sansation';
 import { getLanguageFromParams } from '@/lib/language';
-import Sprite from '@/components/Sprite/Sprite';
+import Sprite from '@/components/ui/Sprite/Sprite';
+import BackgroundEffects from '@/components/BackgroundEffects/BackgroundEffects';
 
 const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
@@ -29,9 +30,12 @@ const RootLayout = async ({
       <body
         className={`${raleway.variable} ${manrope.variable} ${Sansation.variable} antialiased`}
       >
-        <Sprite />
-        <Header language={language} />
-        <main>{children}</main>
+        <div className="relative min-h-screen overflow-hidden">
+          <Sprite />
+          <BackgroundEffects />
+          <Header language={language} />
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
