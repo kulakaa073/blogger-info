@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Language } from '@/lib/translations';
-import BlurredEllipse from '../ui/BlurredEllipse/BlurredEllipse';
 
 interface HeroProps {
   language: Language;
@@ -23,6 +22,7 @@ const Hero = ({ language }: HeroProps) => {
               width={313}
               height={354}
               className="w-full h-auto object-cover"
+              priority
             />
           </picture>
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_57.77%,rgba(0,0,0,0.7)_79.8%)] w-78.25 h-88.5" />

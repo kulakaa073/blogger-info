@@ -8,7 +8,7 @@ const BackgroundEffects = () => {
         width={184.36}
         height={173.59}
         blur={289.32}
-        className="absolute left-[218px] top-[185px] bg-purple"
+        className="left-[218px] top-[185px] bg-purple"
       />
       <BlurredEllipse
         width={184.36}
@@ -20,7 +20,7 @@ const BackgroundEffects = () => {
         width={184.36}
         height={173.59}
         blur={289.32}
-        className="absolute left-[298px] top-[969.59px] bg-teal-3"
+        className="left-[298px] top-[969.59px] bg-teal-3"
       />
     </div>
   );

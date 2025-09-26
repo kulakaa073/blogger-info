@@ -13,7 +13,7 @@ const BlurredEllipse = ({
 }: BlurredEllipseProps) => {
   return (
     <div
-      className={`absolute rounded-full  ${className}`}
+      className={`absolute rounded-full ${className}`}
       style={{
         width: `${width}px`,
         height: `${height}px`,
