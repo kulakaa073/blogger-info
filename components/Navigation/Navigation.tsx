@@ -6,6 +6,7 @@ interface NavigationProps {
 }
 
 const Navigation = ({ className, language }: NavigationProps) => {
+  // Currently does nothing, will work with more content
   return (
     <nav className={className}>
       <ul className="flex items-center gap-7">

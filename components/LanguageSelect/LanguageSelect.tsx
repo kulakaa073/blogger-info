@@ -14,6 +14,7 @@ interface LanguageSelectProps {
 }
 
 const LanguageSelect = ({ currentLanguage }: LanguageSelectProps) => {
+  // Currently an arbitrary compoent, future-proofing functionality
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();

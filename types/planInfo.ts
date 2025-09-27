@@ -1,8 +1,10 @@
 export interface PlanInfo {
+  id?: string;
   name: string;
   badge?: string;
   currentPrice: number;
   originalPrice?: number;
-  featureList: string[];
+  features: string[];
   highlight?: boolean;
+  cardVariant: 'base' | 'bright' | 'gradient';
 }

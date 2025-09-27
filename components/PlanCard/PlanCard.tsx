@@ -9,6 +9,8 @@ interface PlanCardProps {
 }
 
 const PlanCard = ({ planData, variant = 'base', className }: PlanCardProps) => {
+  // Card styles are awful (╯°□°)╯︵ ┻━┻
+  // Please unify them
   const variants = {
     card: {
       base: 'h-107.5 bg-primary text-white pl-8.25 pr-8 py-8 ds:pt-9 ds:pr-9.25 ds:pl-9 ds:pb-6.5 overflow-hidden',
@@ -116,7 +118,7 @@ const PlanCard = ({ planData, variant = 'base', className }: PlanCardProps) => {
             </span>
           </p>
           <ul className="flex flex-col gap-3.5 list-disc list-inside marker:text-transparent">
-            {planData.featureList.map((feature, i) => (
+            {planData.features.map((feature, i) => (
               <li key={`${planData.name}-${feature}-${i}`}>
                 {/*What with this line height? 365%? Ask if designer mistake*/}
                 <p className="whitespace-pre-line ds:whitespace-normal font-raleway font-semibold leading-4.75 relative pl-6.5 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-3.75 before:h-3.75 before:rounded-full before:bg-current">
