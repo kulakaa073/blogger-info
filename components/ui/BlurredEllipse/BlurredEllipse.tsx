@@ -19,6 +19,7 @@ const BlurredEllipse = ({
         height: `${height}px`,
         filter: `blur(${blur}px)`,
       }}
+      aria-hidden="true"
     />
   );
 };

@@ -14,6 +14,7 @@ const Sprite = () => {
     <div
       style={{ display: 'none' }}
       dangerouslySetInnerHTML={{ __html: spriteContent }}
+      aria-hidden="true"
     />
   );
 };

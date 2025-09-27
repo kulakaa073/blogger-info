@@ -12,28 +12,40 @@ const Navigation = ({ className, language }: NavigationProps) => {
         <li>
           <a
             href="#structure"
-            className="font-raleway font-medium leading-4.75"
+            className="font-raleway font-medium leading-4.75 hover:text-shadow-2xs hover:text-shadow-white"
           >
             Структура
           </a>
         </li>
         <li>
-          <a href="#about" className="font-raleway font-medium leading-4.75">
+          <a
+            href="#about"
+            className="font-raleway font-medium leading-4.75 hover:text-shadow-2xs hover:text-shadow-white"
+          >
             Про мене
           </a>
         </li>
         <li>
-          <a href="#pros" className="font-raleway font-medium leading-4.75">
+          <a
+            href="#pros"
+            className="font-raleway font-medium leading-4.75 hover:text-shadow-2xs hover:text-shadow-white"
+          >
             Плюси
           </a>
         </li>
         <li>
-          <a href="#reviews" className="font-raleway font-medium leading-4.75">
+          <a
+            href="#reviews"
+            className="font-raleway font-medium leading-4.75 hover:text-shadow-2xs hover:text-shadow-white"
+          >
             Відгуки
           </a>
         </li>
         <li>
-          <a href="#faq" className="font-raleway font-medium leading-4.75">
+          <a
+            href="#faq"
+            className="font-raleway font-medium leading-4.75 hover:text-shadow-2xs hover:text-shadow-white"
+          >
             FAQ
           </a>
         </li>
