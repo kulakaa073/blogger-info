@@ -9,11 +9,34 @@ const Navigation = ({ className, language }: NavigationProps) => {
   return (
     <nav className={className}>
       <ul className="flex items-center gap-7">
-        <li>Структура</li>
-        <li>Про мене</li>
-        <li>Плюси</li>
-        <li>Відгуки</li>
-        <li>FAQ</li>
+        <li>
+          <a
+            href="#structure"
+            className="font-raleway font-medium leading-4.75"
+          >
+            Структура
+          </a>
+        </li>
+        <li>
+          <a href="#about" className="font-raleway font-medium leading-4.75">
+            Про мене
+          </a>
+        </li>
+        <li>
+          <a href="#pros" className="font-raleway font-medium leading-4.75">
+            Плюси
+          </a>
+        </li>
+        <li>
+          <a href="#reviews" className="font-raleway font-medium leading-4.75">
+            Відгуки
+          </a>
+        </li>
+        <li>
+          <a href="#faq" className="font-raleway font-medium leading-4.75">
+            FAQ
+          </a>
+        </li>
       </ul>
     </nav>
   );

@@ -30,12 +30,14 @@ const LanguageSelect = ({ currentLanguage }: LanguageSelectProps) => {
   };
 
   return (
-    <div className="relative rounded-sm p-1.25 hover:inset-ring-2 hover:inset-ring-white transition-all duration-250 ease-in-out">
+    <div className="relative rounded-[8px] p-1.25 hover:inset-ring-2 hover:inset-ring-white transition-all duration-250 ease-in-out">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2.25 h-5"
       >
-        <span className="font-medium">{currentLang?.name}</span>
+        <span className="font-raleway text-sm leading-5 font-bold ds:text-base">
+          {currentLang?.name}
+        </span>
         <div
           className={`transition-transform ${isOpen ? 'scale-y-[-1]' : ''}  duration-300 ease-in-out flex items-center justify-center`}
         >

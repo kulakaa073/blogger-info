@@ -35,13 +35,13 @@ const PromoBlock = ({ language }: PromoBlockProps) => {
             width={315.7}
             height={282}
             blur={74.3132}
-            className="-left-[221px] -top-[203px] [background:var(--gradient-main)] ds:hidden"
+            className="-left-[221px] -top-[203px] [background:var(--gradient-main)] ds:hidden opacity-50"
           />
           <BlurredEllipse
             width={315.7}
             height={282}
             blur={74.3132}
-            className="left-[299px] top-[408px] [background:var(--gradient-main)] ds:hidden"
+            className="left-[299px] top-[408px] [background:var(--gradient-main)] ds:hidden opacity-50"
           />
           <h2 className="font-raleway font-bold text-xl ds:text-4xl leading-5.75 ds:leading-10.5 text-center uppercase flex flex-col ds:block mb-5 ds:w-111.75">
             Дізнайся як створити контент, який{' '}

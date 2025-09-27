@@ -55,14 +55,18 @@
   --font-sansation: 'var(--font-sansation)', sans-serif;
 
   --text-heading: 54px;
+  --text-heading-big: 64px;
   --text-ds-heading: 96px;
+  --text-base: 16px;
+  --text-med: 18px;
 
   --breakpoint-mb: 393px;
   --container-mb: 393px;
   --breakpoint-ds: 1280px;
   --container-ds: 1280px;
 
-  --radius-bg: 16px;
+  --radius-big: 18px;
+  --radius-xbig: 28px;
 
   --grid-area-hero: 1 / 1 / 3 / 3;
   --grid-area-left: 1 / 1;

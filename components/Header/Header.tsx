@@ -11,7 +11,7 @@ const Header = ({ language }: HeaderProps) => {
     <header className="w-full mt-12.75 ds:mt-10">
       <div className="max-w-mb ds:max-w-ds px-10 ds:px-20 mx-auto flex items-center justify-between">
         <div>
-          <p className="font-sansation font-bold leading-4.5 uppercase">
+          <p className="font-sansation font-bold leading-4.5 uppercase ds:text-med ds:leading-5">
             Aleko{' '}
             <span className="[background-image:var(--gradient-main)] bg-clip-text text-transparent">
               Sokurashvili

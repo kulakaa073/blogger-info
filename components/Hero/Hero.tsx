@@ -47,7 +47,10 @@ const Hero = ({ language }: HeroProps) => {
           </button>
           <p className="font-raleway font-semibold text-xl/5.5 ds:text-2xl ds:leading-[36.8px] text-red-2 flex items-center gap-[9.38px]">
             1000 грн
-            <span className="line-through text-sm text-gray">2000грн</span>
+            <span className="relative text-sm text-gray inline-block px-[1.4px] ds:px-1">
+              2000грн
+              <span className="absolute left-0 right-0 top-1/2 h-[1px] bg-current -translate-y-1/2"></span>
+            </span>
           </p>
         </div>
       </div>
