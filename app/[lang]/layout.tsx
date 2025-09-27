@@ -23,7 +23,7 @@ const RootLayout = async ({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) => {
   const resolvedParams = await params;
   const language = getLanguageFromParams(resolvedParams);
