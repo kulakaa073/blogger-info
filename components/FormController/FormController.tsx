@@ -1,28 +1,31 @@
 'use client';
-import { useSubmitForm } from '@/hooks/useSubmitForm';
 import { useState } from 'react';
 import Modal from '../ui/Modal/Modal';
 import SubscribeForm from '@/components/SubscribeForm/SubscribeForm';
 import { UserInfo } from '@/types/userInfo';
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
+import { sendTelegramMessage } from '@/lib/api/telegram';
 
 interface FormControllerProps {
   children: React.ReactElement;
 }
 const FormController = ({ children }: FormControllerProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const submitForm = useSubmitForm();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useLockBodyScroll(isOpen);
 
-  const handleSubmit = (data: UserInfo) => {
+  const handleSubmit = async (data: UserInfo) => {
+    setIsSubmitting(true);
+
     try {
-      console.log(data);
-      //await submitForm.mutateAsync(data);
+      await sendTelegramMessage(data);
+      alert('Повідомлення успішно відправлено!');
       setIsOpen(false);
     } catch (error) {
-      console.log(error);
-      // Handle error
+      alert(error instanceof Error ? error.message : 'Сталася помилка');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -33,6 +36,7 @@ const FormController = ({ children }: FormControllerProps) => {
         <SubscribeForm
           onSubmit={handleSubmit}
           onClose={() => setIsOpen(false)}
+          isSubmitting={isSubmitting}
         />
       </Modal>
     </>

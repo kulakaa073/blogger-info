@@ -8,9 +8,14 @@ import * as Yup from 'yup';
 export interface SubscribeFormProps {
   onSubmit: (values: UserInfo) => void;
   onClose: () => void;
+  isSubmitting: boolean;
 }
 
-const SubscribeForm = ({ onSubmit, onClose }: SubscribeFormProps) => {
+const SubscribeForm = ({
+  onSubmit,
+  onClose,
+  isSubmitting,
+}: SubscribeFormProps) => {
   const nameFieldId = useId();
   const nickNameFieldId = useId();
   const emailFieldId = useId();
@@ -101,6 +106,7 @@ const SubscribeForm = ({ onSubmit, onClose }: SubscribeFormProps) => {
           <div className="w-79.25 ds:w-77.5 h-12.5 [background:var(--gradient-main)] p-[1px] rounded-small">
             <button
               type="submit"
+              disabled={isSubmitting}
               className="hover:opacity-80 rounded-small font-raleway font-semibold text-sm leading-5 center w-full h-full flex items-center justify-center bg-white text-primary"
             >
               Відправити
