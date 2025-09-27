@@ -7,6 +7,7 @@ import { Sansation } from '@/fonts/Sansation';
 import { getLanguageFromParams } from '@/lib/language';
 import Sprite from '@/components/ui/Sprite/Sprite';
 import BackgroundEffects from '@/components/BackgroundEffects/BackgroundEffects';
+import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
 
 const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
@@ -33,8 +34,10 @@ const RootLayout = async ({
         <div className="relative min-h-screen overflow-hidden">
           <Sprite />
           <BackgroundEffects />
-          <Header language={language} />
-          <main>{children}</main>
+          <TanStackProvider>
+            <Header language={language} />
+            <main>{children}</main>
+          </TanStackProvider>
         </div>
       </body>
     </html>
