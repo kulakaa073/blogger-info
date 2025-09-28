@@ -13,7 +13,7 @@ interface DialogProps {
 
 const Dialog = ({ onClose, dialogData }: DialogProps) => {
   return (
-    <div className="relative max-w-78.25 ds:max-w-auto bg-primary shadow-[4px_6px_10px_4px_#A75DF333_inset] rounded-xbig px-10 py-15 ds:px-20 ds:py-22 flex flex-col">
+    <div className="relative max-w-78.25 ds:max-w-none bg-primary shadow-[4px_6px_10px_4px_#A75DF333_inset] rounded-xbig px-10 py-15 ds:px-20 ds:py-22 flex flex-col">
       <button
         type="button"
         onClick={onClose}

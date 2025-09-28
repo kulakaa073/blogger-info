@@ -42,7 +42,7 @@ const Hero = ({ language }: HeroProps) => {
           <ScrollWrap targetSection="plans">
             <button
               aria-label="Купити курс 'Секрети вірусних відео' зі знижкою 50%"
-              className="relative flex items-center justify-center font-raleway font-semibold text-sm/5.5 ds:text-[22.11px] ds:leading-[36.8px] bg-white text-black shadow-[4.32px_6.48px_10.8px_4.32px_#A75DF333_inset] h-15 ds:h-18.5 w-78.25 ds:w-full rounded-full mb-2.75 hover:brightness-105 hover:scale-102 transition-all duration-250 ease-in-out"
+              className="relative flex items-center justify-center font-raleway font-semibold text-sm/5.5 ds:text-[22.11px] ds:leading-[36.8px] bg-white text-black shadow-[4.32px_6.48px_10.8px_4.32px_#A75DF333_inset] h-15 ds:h-18.5 w-78.25 ds:w-133.5 rounded-full mb-2.75 hover:brightness-105 hover:scale-102 transition-all duration-250 ease-in-out"
             >
               Секрети вірусних відео
               <span
