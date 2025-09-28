@@ -1,7 +1,7 @@
 import { Language } from '@/lib/translations';
 import BlurredEllipse from '../ui/BlurredEllipse/BlurredEllipse';
-import { scrollToSection } from '@/lib/utils/scrollToSection';
 import ScrollWrap from '../ui/ScrollWrap/ScrollWrap';
+import Image from 'next/image';
 
 interface PromoBlockProps {
   language: Language;
@@ -17,14 +17,14 @@ const PromoBlock = ({ language }: PromoBlockProps) => {
         {/* Desktop promo background */}
         <div className="hidden ds:block [background:var(--gradient-promo)] absolute right-0 top-0 h-full w-[47.5%]" />
         <div className="hidden ds:block absolute left-0 top-0 h-full w-[38.98%]">
-          <picture>
-            <source srcSet="/images/promo-desktop@1x.jpg 1x, /images/promo-desktop@2x.jpg 2x" />
-            <img
-              src="/images/promo-desktop@1x.jpg"
-              alt="Фото з промо блоку курсу 'Секрети вірусних відео'"
-              className="object-cover"
-            />
-          </picture>
+          <Image
+            src="/images/promo-desktop@1x.webp"
+            alt="Фото з промо блоку курсу 'Секрети вірусних відео'"
+            fill
+            quality={85}
+            sizes="(max-width: 1279px) 0px, 38.98vw"
+            className="object-cover"
+          />
         </div>
         <BlurredEllipse
           width={712}

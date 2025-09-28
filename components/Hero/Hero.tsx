@@ -1,5 +1,5 @@
 import { Language } from '@/lib/translations';
-import { scrollToSection } from '@/lib/utils/scrollToSection';
+import Image from 'next/image';
 import ScrollWrap from '../ui/ScrollWrap/ScrollWrap';
 
 interface HeroProps {
@@ -10,22 +10,33 @@ const Hero = ({ language }: HeroProps) => {
   return (
     <section id="hero" className="w-full pt-6 ds:pt-16.75 pb-16.5">
       <div className="max-w-mb ds:max-w-ds px-10 ds:px-20 mx-auto flex flex-col items-center ds:grid ds:grid-cols-[644px] ds:grid-rows-auto ds:relative ds:gap-x-10 ds:gap-y-10.5 ds:place-items-start">
-        <div className="relative ds:grid-area-left ds:w-161 ds:h-116.5">
-          <picture className=" block w-full rounded-bg overflow-hidden">
-            <source
-              media="(min-width: 1280px)"
-              srcSet="/images/hero-desktop@1x.jpg 1x, /images/hero-desktop@2x.jpg 2x"
-            />
-            <source srcSet="/images/hero-mobile@1x.jpg 1x, /images/hero-mobile@2x.jpg 2x" />
-            <img
-              src="/images/hero-mobile@1x.jpg"
+        <div className="relative w-full ds:grid-area-left ds:w-161 ds:h-116.5">
+          {/* Mobile Image */}
+          <div className="relative w-full rounded-big overflow-hidden aspect-[313/354] ds:hidden">
+            <Image
+              src="/images/hero-mobile@1x.webp"
               alt="Ілюстрація курсу «Секрети вірусних відео»"
-              width={313}
-              height={354}
-              className="w-full h-auto object-cover"
+              fill
+              priority
+              quality={85}
+              sizes="313px"
+              className="object-cover"
             />
-          </picture>
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_57.77%,rgba(0,0,0,0.7)_79.8%)] w-78.25 h-88.5 ds:hidden" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_57.77%,rgba(0,0,0,0.7)_79.8%)]" />
+          </div>
+
+          {/* Desktop Image */}
+          <div className="hidden ds:block relative w-full rounded-big overflow-hidden h-full">
+            <Image
+              src="/images/hero-desktop@1x.webp"
+              alt="Ілюстрація курсу «Секрети вірусних відео»"
+              fill
+              priority
+              quality={85}
+              sizes="644px"
+              className="object-cover"
+            />
+          </div>
         </div>
         <h1 className="ds:grid-area-hero ds:w-142.5 relative z-1 flex flex-col text-center ds:text-left font-raleway font-extrabold text-heading ds:text-ds-heading leading-15.75 ds:leading-28.25 uppercase -mt-19.75 mb-8 ds:mt-52.5 ds:ml-142.5 ds:mb-0">
           <span className="mb-1 font-bold text-[20.93px] ds:text-8 leading-6.25 ds:leading-9.5 [background-image:var(--gradient-accent)] bg-clip-text text-transparent normal-case">
