@@ -1,12 +1,12 @@
 'use client';
 import { useState } from 'react';
-import Modal from '../ui/Modal/Modal';
-import ContactForm from '@/components/ContactForm/ContactForm';
+import Modal from '../Modal/Modal';
+import ContactForm from '@/components/ui/ContactForm/ContactForm';
 import { UserInfo } from '@/types/userInfo';
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
 import { sendTelegramMessage } from '@/lib/api/telegram';
-import DialogController from '../ui/DialogController/DialogController';
-import { DialogData } from '../ui/Dialog/Dialog';
+import DialogController from '../DialogController/DialogController';
+import { DialogData } from '../Dialog/Dialog';
 
 interface FormControllerProps {
   children: React.ReactElement;

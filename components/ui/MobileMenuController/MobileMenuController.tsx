@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Modal from '../ui/Modal/Modal';
+import Modal from '../Modal/Modal';
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import { Language } from '@/lib/translations';

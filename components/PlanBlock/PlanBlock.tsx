@@ -1,4 +1,4 @@
-import PlanCard from '../PlanCard/PlanCard';
+import PlanCard from '../ui/PlanCard/PlanCard';
 import { Language } from '@/lib/translations';
 import { datoCMSApi } from '@/lib/api/datocms';
 

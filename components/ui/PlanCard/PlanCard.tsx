@@ -1,6 +1,6 @@
 import { PlanInfo } from '@/types/planInfo';
 import clsx from 'clsx';
-import BlurredEllipse from '../ui/BlurredEllipse/BlurredEllipse';
+import BlurredEllipse from '../BlurredEllipse/BlurredEllipse';
 import FormController from '../FormController/FormController';
 
 interface PlanCardProps {

@@ -1,7 +1,7 @@
 import { Language } from '@/lib/translations';
-import LanguageSelect from '../LanguageSelect/LanguageSelect';
-import Navigation from '../Navigation/Navigation';
-import MobileMenuController from '../MobileMenuController/MobileMenuController';
+import LanguageSelect from '../ui/LanguageSelect/LanguageSelect';
+import Navigation from '../ui/Navigation/Navigation';
+import MobileMenuController from '../ui/MobileMenuController/MobileMenuController';
 import Link from 'next/link';
 import { scrollToSection } from '@/lib/utils/scrollToSection';
 import ScrollWrap from '../ui/ScrollWrap/ScrollWrap';

@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "next-lint": "next lint"
+    "next-lint": "next lint",
+    "optimize-images": "next scripts/convert-images.js"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.2",
