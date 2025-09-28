@@ -9,9 +9,10 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  isOwnCloseButton?: boolean;
 }
 
-const Modal = ({ children, isOpen, onClose }: ModalProps) => {
+const Modal = ({ children, isOpen, onClose, isOwnCloseButton }: ModalProps) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -68,15 +69,18 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
         className="absolute inset-0 bg-primary ds:bg-black/50"
         aria-hidden="true"
       />
-      <button
-        type="button"
-        onClick={() => onClose()}
-        className="ds:hidden absolute top-8 right-[22.99px] rounded-full hover:bg-white/20 transition-all ease-in-out duration-250 z-54"
-      >
-        <svg className="w-8 h-8 fill-white ">
-          <use href="#icon-close" />
-        </svg>
-      </button>
+      {!isOwnCloseButton && (
+        <button
+          type="button"
+          onClick={() => onClose()}
+          aria-label="Закрити модальне вікно"
+          className="absolute top-8 right-[22.99px] rounded-full hover:bg-white/20 transition-all ease-in-out duration-250 z-54 hover:opacity-80"
+        >
+          <svg className="w-8 h-8 fill-white ">
+            <use href="#icon-close" />
+          </svg>
+        </button>
+      )}
       <div
         onClick={(e) => e.stopPropagation()}
         role="dialog"

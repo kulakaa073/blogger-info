@@ -8,7 +8,7 @@ interface NavigationProps {
 const Navigation = ({ className, language }: NavigationProps) => {
   // Currently does nothing, will work with more content
   return (
-    <nav className={className}>
+    <nav className={className} aria-label="Основна навігація">
       <ul className="flex items-center gap-7">
         <li>
           <a

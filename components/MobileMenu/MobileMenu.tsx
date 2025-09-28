@@ -9,7 +9,7 @@ interface MobileMenuProps {
 
 const MobileMenu = ({ className, language, onClose }: MobileMenuProps) => {
   return (
-    <nav className={clsx(className, 'bg-primary')}>
+    <nav className={clsx(className, 'bg-primary')} aria-label="Мобільне меню">
       <ul className="flex items-center flex-col gap-12">
         <li>
           <a

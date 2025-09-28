@@ -1,6 +1,7 @@
 import { PlanInfo } from '@/types/planInfo';
 import clsx from 'clsx';
 import BlurredEllipse from '../ui/BlurredEllipse/BlurredEllipse';
+import FormController from '../FormController/FormController';
 
 interface PlanCardProps {
   planData: PlanInfo;
@@ -63,7 +64,10 @@ const PlanCard = ({ planData, variant = 'base', className }: PlanCardProps) => {
       <div className="uppercase h-full flex flex-col justify-between">
         <div>
           {planData.highlight && (
-            <div className="flex items-center justify-center h-10.25 w-42.25 rounded-full absolute left-1/2 top-0 [background:var(--gradient-secondary)] shadow-[0px_4px_16px_1px_#00000040] -translate-y-1/2 -translate-x-1/2 ds:-translate-y-[71.42%]">
+            <div
+              role="status"
+              className="flex items-center justify-center h-10.25 w-42.25 rounded-full absolute left-1/2 top-0 [background:var(--gradient-secondary)] shadow-[0px_4px_16px_1px_#00000040] -translate-y-1/2 -translate-x-1/2 ds:-translate-y-[71.42%]"
+            >
               <p className="font-raleway font-bold leading-4.75 text-white">
                 Best seller
               </p>
@@ -106,18 +110,21 @@ const PlanCard = ({ planData, variant = 'base', className }: PlanCardProps) => {
               variants.price[variant],
             )}
           >
-            {`${planData.currentPrice} $`}
-            <span
+            <ins className="no-underline">{`${planData.currentPrice} $`}</ins>
+            <del
               className={clsx(
                 variants.strikeLine[variant],
-                'relative text-xl leading-6.75 inline-block',
+                'relative text-xl leading-6.75 inline-block no-underline',
               )}
             >
               {`${planData.originalPrice}$`}
-              <span className="absolute left-0 right-0 top-1/2 h-[2px] bg-current -translate-y-1/2"></span>
-            </span>
+              <span
+                aria-hidden="true"
+                className="absolute left-0 right-0 top-1/2 h-[2px] bg-current -translate-y-1/2"
+              ></span>
+            </del>
           </p>
-          <ul className="flex flex-col gap-3.5 list-disc list-inside marker:text-transparent">
+          <ul className="flex flex-col gap-3.5 list-disc list-inside marker:text-current">
             {planData.features.map((feature, i) => (
               <li key={`${planData.name}-${feature}-${i}`}>
                 {/*What with this line height? 365%? Ask if designer mistake*/}
@@ -128,14 +135,17 @@ const PlanCard = ({ planData, variant = 'base', className }: PlanCardProps) => {
             ))}
           </ul>
         </div>
-        <button
-          className={clsx(
-            variants.button[variant],
-            'w-full rounded-full h-11.75 flex items-center justify-center font-manrope font-semibold text-sm leading-4.75 ds:text-base ds:leading-5.5 hover:scale-102 transition-all duration-250 ease-in-out',
-          )}
-        >
-          Купити
-        </button>
+        <FormController planName={planData.name} planId={planData.id}>
+          <button
+            aria-label={`Купити тариф ${planData.name}`}
+            className={clsx(
+              variants.button[variant],
+              'w-full rounded-full h-11.75 flex items-center justify-center font-manrope font-semibold text-sm leading-4.75 ds:text-base ds:leading-5.5 hover:scale-102 transition-all duration-250 ease-in-out',
+            )}
+          >
+            Купити
+          </button>
+        </FormController>
       </div>
     </div>
   );

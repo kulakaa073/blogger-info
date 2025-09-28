@@ -1,12 +1,16 @@
 import { UserInfo } from '@/types/userInfo';
 
-export async function sendTelegramMessage(data: UserInfo) {
+export const sendTelegramMessage = async (
+  data: UserInfo,
+  planId: string | undefined,
+  planName: string | undefined,
+) => {
   const response = await fetch('/api/telegram', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify({ ...data, planId, planName }),
   });
 
   if (!response.ok) {
@@ -15,4 +19,4 @@ export async function sendTelegramMessage(data: UserInfo) {
   }
 
   return response.json();
-}
+};

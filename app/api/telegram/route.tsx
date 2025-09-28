@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, telegramNickname } = body;
+    const { name, email, telegramNickname, planName, planId } = body;
 
     if (!email) {
       return NextResponse.json(
@@ -25,12 +25,15 @@ export async function POST(request: NextRequest) {
 
     const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
+    // Change text later to your liking
     const text = `
 🆕 Нова заявка!
 
 👤 Ім'я: ${name || 'Не вказано'}
 📧 Email: ${email}
 💬 Telegram: ${telegramNickname ? `@${telegramNickname}` : 'Не вказано'}
+План: ${planName || 'Не вказано'} 
+ID плану (для БД): ${planId || 'Не вказано'} 
     `.trim();
 
     const response = await fetch(telegramUrl, {

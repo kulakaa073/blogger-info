@@ -35,6 +35,9 @@ const LanguageSelect = ({ currentLanguage }: LanguageSelectProps) => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2.25 h-5"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-controls="language-list"
       >
         <span className="font-raleway text-sm leading-5 font-bold ds:text-base">
           {currentLang?.name}
@@ -54,11 +57,17 @@ const LanguageSelect = ({ currentLanguage }: LanguageSelectProps) => {
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute top-full left-0 mt-1 bg-primary rounded-lg shadow-lg z-50 min-w-full">
+          <div
+            id="language-list"
+            role="listbox"
+            className="absolute top-full left-0 mt-1 bg-primary rounded-lg shadow-lg z-50 min-w-full"
+          >
             {languages.map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => switchLanguage(lang.code)}
+                role="option"
+                aria-selected={currentLanguage === lang.code}
                 className={`w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-gray-100 hover:text-primary first:rounded-t-lg last:rounded-b-lg transition-colors ${
                   currentLanguage === lang.code
                     ? 'bg-blue-50 text-gray-900'

@@ -12,7 +12,7 @@ const PlanBlock = async ({ language }: PricingBlockProps) => {
     /*Future feature: add functionality for smooth scrolling for more than 3 plans, except will have to make it client component, but its fine*/
   }
   return (
-    <section className="w-full pt-16.5 ds:pt-16.75 pb-19">
+    <section id="plans" className="w-full pt-16.5 ds:pt-16.75 pb-19">
       <div className="max-w-mb ds:max-w-ds px-10 ds:px-20 mx-auto">
         <h2 className="font-raleway font-bold text-2xl ds:text-5xl leading-7 ds:leading-14 uppercase mb-7 ds:mb-19.75 text-center">
           Тарифи
