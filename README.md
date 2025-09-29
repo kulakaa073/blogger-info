@@ -16,6 +16,11 @@ A modern, responsive landing page for an online video course "Секрети в�
   - Gradient effects and blur overlays
   - Custom SVG sprite system
   - Accessible design with ARIA labels
+- **DatoCMS Integration**:
+  - Loading paid plans data from DatoCMS using graphQL client
+- **Telegram Bot Integration**:
+  - Sending contact form data to your manager telegram chat
+  - Invite to the testing chat: [https://t.me/+8bvI3n5gQqQxYTAy]
 
 ## 🛠 Tech Stack
 
@@ -39,7 +44,7 @@ npm install
 # Run development server
 npm run dev
 ```
-Open http://localhost:3000 to view it in the browser.
+Open ``http://localhost:3000`` to view it in the browser.
 
 ## 🏗 Project Structure
 
